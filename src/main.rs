@@ -119,10 +119,10 @@ fn main() {
                 r.method(http::Method::GET).with(index);
                 r.method(http::Method::POST).with(upload);
             })
-    }).bind("127.0.0.1:8080")
+    }).bind("127.0.0.1:8082")
         .unwrap()
         .start();
 
-    println!("Starting http server: 127.0.0.1:8080");
+    println!("Starting http server: 127.0.0.1:8082");
     let _ = sys.run();
 }
