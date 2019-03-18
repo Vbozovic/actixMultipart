@@ -1,0 +1,14 @@
+[package]
+name = "ActixTest"
+version = "0.1.0"
+authors = ["vukbozovic <vuk.bozovic@p3-group.com>"]
+edition = "2018"
+
+
+[dependencies]
+env_logger = "*"
+futures = "0.1"
+
+actix = "0.7"
+actix-web = "0.7"
+lazy_static = "1.3.0"
