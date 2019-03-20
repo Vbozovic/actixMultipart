@@ -115,14 +115,14 @@ fn main() {
         App::with_state(AppState {
             counter: Cell::new(0),
         }).middleware(middleware::Logger::default())
-            .resource("/", |r| {
+            .resource("/ca/streaming", |r| {
                 r.method(http::Method::GET).with(index);
                 r.method(http::Method::POST).with(upload);
             })
-    }).bind("127.0.0.1:8082")
+    }).bind("localhost:8082")
         .unwrap()
         .start();
 
-    println!("Starting http server: 127.0.0.1:8082");
+    println!("Starting http server: localhost:8082");
     let _ = sys.run();
 }
